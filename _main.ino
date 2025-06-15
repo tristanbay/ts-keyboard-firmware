@@ -19,6 +19,8 @@ void setup()
   nt = Notes();
   st = Settings();
   md = ModeButton();
+  TinyUSBDevice.setProductDescriptor(DEVNAME);
+  TinyUSBDevice.setManufacturerDescriptor(MFRNAME);
   Serial.begin(9600);
   digitalWrite(PULSEPIN, LOW);
   digitalWrite(SHIFTPIN, LOW);

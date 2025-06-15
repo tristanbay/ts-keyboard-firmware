@@ -17,6 +17,9 @@
 #define STOREPIN 6
 #define MODEPIN 9
 
+#define DEVNAME "TS41 MIDI Keyboard"
+#define MFRNAME "Tristan Bay"
+
 #define MIDICH 1
 #define MIDIVEL 64
 
