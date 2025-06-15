@@ -1,6 +1,8 @@
 # TS Keyboard Firmware
 This is the official repository for the firmware for the TS41 isomorphic/microtonal MIDI keyboard, powered by the Adafruit KB2040 microcontroller.
 
+![The TS41 MIDI Keyboard](https://raw.githubusercontent.com/tristanbay/ts-keyboard-firmware/refs/heads/main/ts41_pic.jpg)
+
 ## How to upload to the KB2040
 1. Download Arduino IDE v2 and open the application.
 2. In the Library Manager, install "Adafruit TinyUSB Library" by *Adafruit*.
