@@ -31,11 +31,10 @@ void loop()
 {
   md.update(st);
   ky.keyscan();
-  //ky.printkeys();
+  // ky.printkeys();
   nt.update(ky, st);
-  nt.printnotes();
-  // send midi
-  for (int i = 0; i < NOTECOUNT; ++i) {
+  // nt.printnotes();
+  for (int i = 0; i < NOTECOUNT; ++i) { // send MIDI messages
     switch (nt.status[i]) {
       case 1:
         MIDIusb.sendNoteOn(i, MIDIVEL, MIDICH);
