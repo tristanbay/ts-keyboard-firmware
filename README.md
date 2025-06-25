@@ -6,7 +6,7 @@ This is the official repository for the firmware for the TS41 isomorphic/microto
 ## Customizing layouts
 To change the keyboard's layout presets, make your own layout by following the instructions below or copy and paste one from [layouts.txt](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/layouts.txt) into the definition of `mpre` in the `Settings::Settings()` function in the [settings.ino](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/settings.ino) file. If there are more or fewer total layouts given in the function than before, change the value of the `MAPCOUNT` macro in [ts41.ino](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/ts41.ino) to however many layouts there are now.
 
-To create your own layout, make a list of comma-separated MIDI note values where the position of the number in the list corresponds to the index of the physical key. The 41edo preser
+To create your own layout, make a list of comma-separated MIDI note values where the position of the number in the list corresponds to the index of the physical key.
 
 ## How to upload the firmware to the KB2040
 1. Download Arduino IDE v2 and open the application.
