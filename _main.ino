@@ -48,4 +48,6 @@ void loop()
         break;
     }
   }
+  while (MIDIusb.read()) {
+  }
 }
