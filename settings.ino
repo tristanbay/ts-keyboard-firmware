@@ -119,15 +119,70 @@ Settings::Settings()
                     95, 93, 91,
                   98, 96, 94, 92,
                     99, 97, 95
+    },
+    { // 19edo
+        36, 37, 38,
+      37, 38, 39, 40,
+        39, 40, 41,
+          41, 42, 43,
+        42, 43, 44, 45,
+          44, 45, 46,
+        45, 46, 47, 48,
+          47, 48, 49,
+        48, 49, 50, 51,
+          50, 51, 52,
+            52, 53, 54,
+          53, 54, 55, 56,
+            55, 56, 57,
+          56, 57, 58, 59,
+            58, 59, 60,
+              60, 61, 62,
+            61, 62, 63, 64,
+              63, 64, 65,
+            64, 65, 66, 67,
+              66, 67, 68,
+            67, 68, 69, 70,
+              69, 70, 71,
+                71, 72, 73,
+              72, 73, 74, 75,
+                74, 75, 76,
+              75, 76, 77, 78,
+                77, 78, 79,
+                  79, 80, 81,
+                80, 81, 82, 83,
+                  82, 83, 84,
+                83, 84, 85, 86,
+                  85, 86, 87,
+                86, 87, 88, 89,
+                  88, 89, 90,
+                    90, 91, 92,
+                  91, 92, 93, 94,
+                    93, 94, 95
     }
   };
   for (int i = 0; i < MAPCOUNT; ++i) // move to struct-wide array
     for (int j = 0; j < KEYCOUNT; ++j)
       mappings[j][i] = mpre[i][j];
+  uint8_t cpre[MAPCOUNT][PIXCHCOUNT] = {
+    { 255,  24,   5 }, // 41edo
+    { 255, 205, 127 }, // 31edo
+    {   8, 255,  35 }, // 22edo
+    {  39,   6, 255 }  // 19edo
+  };
+  for (int i = 0; i < MAPCOUNT; ++i) // move to struct-wide array
+    for (int j = 0; j < PIXCHCOUNT; ++j)
+      colors[j][i] = cpre[i][j];
   currmap = 0; // default mapping index
+}
+
+void Settings::updatepixcolor()
+{
+  pix.setPixelColor(0, st.colors[0][currmap], st.colors[1][currmap], st.colors[2][currmap]);
+  pix.show();
 }
 
 void Settings::changemapping()
 {
   currmap = (currmap + 1) % MAPCOUNT;
+  updatepixcolor();
 }

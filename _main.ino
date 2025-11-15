@@ -8,6 +8,8 @@ ModeButton md;
 Adafruit_USBD_MIDI usbmidi;
 MIDI_CREATE_INSTANCE(Adafruit_USBD_MIDI, usbmidi, MIDIusb);
 
+Adafruit_NeoPixel pix = Adafruit_NeoPixel(PIXCOUNT, PIXPIN, NEO_GRB + NEO_KHZ800);
+
 void setup()
 {
   pinMode(READPIN, INPUT);
@@ -25,6 +27,9 @@ void setup()
   digitalWrite(PULSEPIN, LOW);
   digitalWrite(SHIFTPIN, LOW);
   digitalWrite(STOREPIN, LOW);
+  pix.setBrightness(PIXBR);
+  pix.begin();
+  st.updatepixcolor();
   MIDIusb.begin(MIDI_CHANNEL_OMNI);
   MIDIusb.turnThruOff();
 }

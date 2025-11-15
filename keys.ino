@@ -25,12 +25,3 @@ void Keys::keyscan()
     delayMicroseconds(PULSEOFF);
   }
 }
-
-void Keys::printkeys() // test function
-{
-  for (int i = 0; i < KEYCOUNT; ++i) {
-    Serial.print(keybuf[i] ? 1 : 0);
-    Serial.print(" ");
-  }
-  Serial.println();
-}
