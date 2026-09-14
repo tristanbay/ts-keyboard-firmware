@@ -6,7 +6,7 @@
 
 #define NOTECOUNT 128 // number of MIDI notes in channel
 #define KEYCOUNT 126 // number of keyboard keys
-#define MAPCOUNT 4 // number of keyboard mappings
+#define MAPCOUNT 3 // number of keyboard mappings
 #define PIXCOUNT 1 // number of NeoPixels
 #define PIXCHCOUNT 3 // number of NeoPixel color channels
 

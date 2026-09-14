@@ -1,5 +1,5 @@
-# TS Keyboard Firmware
-This is the official repository for the firmware for the TS41 isomorphic/microtonal MIDI keyboard, powered by the Adafruit KB2040 microcontroller.  
+# TS Keyboard Firmware (12edo harmonic table variation)
+This is the official repository for the firmware for the TS41 isomorphic/microtonal MIDI keyboard, powered by the Adafruit KB2040 microcontroller, specifically the branch for 12edo mappings.  
 
 ![The TS41 MIDI Keyboard](https://raw.githubusercontent.com/tristanbay/ts-keyboard-firmware/refs/heads/main/ts41_pic.jpg)
 
@@ -11,11 +11,10 @@ To create your own layout, make a list of comma-separated MIDI note values where
 ## Customizing preset colors
 Similar to customizing the layouts, colors for each preset can be customized by changing the entries in the definition of `cpre` in the `Settings::Settings()` function in **settings.ino**. The first position of each sub-array should not be changed (it should stay as `0`) since this refers to the index of the NeoPixel being lit up and there is only one. The second, third, and fourth positions are the amounts of red, green, and blue, respectively, from a range of 0 to 255, and these are the values you want to change.  
 
-The stock firmware has 4 layouts. In order, they are:
-- 41 notes per octave (in orange)
-- 31 notes per octave (in off-white)
-- 22 notes per octave (in emerald green)
-- 19 notes per octave (in indigo)
+This variation of the stock firmware has 3 layouts. In order, they are:
+- 12-tone harmonic table with major thirds going up and right (in light tan)
+- 12-tone harmonic table with major thirds going down and right (in jade green)
+- 12-tone bosanquet (in lavender)
 
 ## Uploading the firmware to the keyboard
 1. Download Arduino IDE v2.
