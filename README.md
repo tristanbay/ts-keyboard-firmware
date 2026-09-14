@@ -28,3 +28,6 @@ This variation of the stock firmware has 3 layouts. In order, they are:
 7. In the top menu bar, under **Tools > USB Stack**, select the "Adafruit TinyUSB" option.
 8. Plug the keyboard into the computer if not already plugged in.
 9. Press the circular "Upload" button near the board drop-down menu (the one with the arrow) **or** press Ctrl-U (or Cmd-U on Mac) to compile and upload the firmware to the microcontroller.
+
+## Recommended reference note and MIDI note number
+When retuning an instrument to play with the TS41, `it is recommended that A4 is mapped to MIDI note 67` for all of the hard-coded layouts that come with the firmware. This makes it so that the middle row of keys on the keyboard play the natural notes (C major/A minor) and that the middle key in the first column is D3, and the middle key in the last column is D6.
