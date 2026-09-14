@@ -1,7 +1,7 @@
 # TS Keyboard Firmware (12edo harmonic table variation)
 This is the official repository for the firmware for the TS41 isomorphic/microtonal MIDI keyboard, powered by the Adafruit KB2040 microcontroller, specifically the branch for 12edo mappings.  
 
-![The TS41 MIDI Keyboard](https://raw.githubusercontent.com/tristanbay/ts-keyboard-firmware/refs/heads/main/ts41_pic.jpg)
+![The TS41 MIDI Keyboard (public domain image)](https://raw.githubusercontent.com/tristanbay/ts-keyboard-firmware/refs/heads/main/ts41_pic.jpg)
 
 ## Customizing layout presets
 To change the keyboard's layout presets, make your own layout by following the instructions below or copy and paste one from [layouts.txt](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/layouts.txt) into the definition of `mpre` in the `Settings::Settings()` function in the [settings.ino](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/settings.ino) file. If there are more or fewer total layouts given in the function than before, change the value of the `MAPCOUNT` macro in [ts41.ino](https://github.com/tristanbay/ts-keyboard-firmware/blob/main/ts41.ino) to however many layouts there are now.  
@@ -28,3 +28,6 @@ This variation of the stock firmware has 3 layouts. In order, they are:
 7. In the top menu bar, under **Tools > USB Stack**, select the "Adafruit TinyUSB" option.
 8. Plug the keyboard into the computer if not already plugged in.
 9. Press the circular "Upload" button near the board drop-down menu (the one with the arrow) **or** press Ctrl-U (or Cmd-U on Mac) to compile and upload the firmware to the microcontroller.
+
+## Recommended reference note and MIDI note number
+When retuning an instrument to play with the TS41, `it is recommended that A4 is mapped to MIDI note 67` for all of the hard-coded layouts that come with the firmware. This makes it so that the middle row of keys on the keyboard play the natural notes (C major/A minor) and that the middle key in the first column is D3, and the middle key in the last column is D6.
