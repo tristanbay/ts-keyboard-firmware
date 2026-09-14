@@ -23,7 +23,7 @@
 #define PIXPIN 17
 
 #define DEVNAME "TS41 MIDI Keyboard"
-#define MFRNAME "Tristan Bay"
+#define MFRNAME "Delta Rational"
 
 #define MIDICH 1
 #define MIDIVEL 64
