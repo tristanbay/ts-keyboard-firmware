@@ -125,9 +125,9 @@ Settings::Settings()
     for (int j = 0; j < KEYCOUNT; ++j)
       mappings[j][i] = mpre[i][j];
   uint8_t cpre[MAPCOUNT][PIXCHCOUNT] = {
-    { 255, 191, 127 }, // 12edo harmonic table (major thirds up/right)
+    { 255, 127, 63 }, // 12edo harmonic table (major thirds up/right)
     { 127, 255, 191 }, // 12edo harmonic table (major thirds down/right)
-    { 191, 127, 255 }, // 12edo bosanquet
+    { 223, 159, 255 }, // 12edo bosanquet
   };
   for (int i = 0; i < MAPCOUNT; ++i) // move to struct-wide array
     for (int j = 0; j < PIXCHCOUNT; ++j)

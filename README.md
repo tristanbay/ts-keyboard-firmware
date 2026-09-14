@@ -12,9 +12,9 @@ To create your own layout, make a list of comma-separated MIDI note values where
 Similar to customizing the layouts, colors for each preset can be customized by changing the entries in the definition of `cpre` in the `Settings::Settings()` function in **settings.ino**. The first position of each sub-array should not be changed (it should stay as `0`) since this refers to the index of the NeoPixel being lit up and there is only one. The second, third, and fourth positions are the amounts of red, green, and blue, respectively, from a range of 0 to 255, and these are the values you want to change.  
 
 This variation of the stock firmware has 3 layouts. In order, they are:
-- 12-tone harmonic table with major thirds going up and right (in light tan)
-- 12-tone harmonic table with major thirds going down and right (in jade green)
-- 12-tone bosanquet (in lavender)
+- 12-tone harmonic table with major thirds going up and right (in green and pink)
+- 12-tone harmonic table with major thirds going down and right (in aqua)
+- 12-tone bosanquet (in cyan and indigo)
 
 ## Uploading the firmware to the keyboard
 1. Download Arduino IDE v2.
